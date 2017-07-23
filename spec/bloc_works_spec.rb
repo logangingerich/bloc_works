@@ -1,11 +1,16 @@
-require "spec_helper"
+require 'test/unit'
+require 'rack/test'
 
-describe BlocWorks do
-  it "has a version number" do
-    expect(BlocWorks::VERSION).not_to be nil
+class ApplicationTest < Test::Unit::TestCase
+  include Rack::Test::Methods
+
+  def app
+    BlocWorks::Application.new
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  def call_test
+    get "/"
+    assert_equal("Hello Blocheads!", last_response.body)
   end
+
 end

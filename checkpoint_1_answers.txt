@@ -1,0 +1,25 @@
+1. ActiveModel
+  -Active Model is a library with modules used in developing modules that need
+  some Active Record features. It is used to add attribute methods, Active Record-
+  style callbacks, validations and more. Basically, it is the required interface
+  for an object to interact with Action Pack and Action View.
+
+2. ActiveRecord
+  -Active Record is the Model of Model-View-Controller and the layer responsible
+  for representing business data and logic. It facilitates the creation and use
+  of objects requiring persistent database storage. At its core, it is a type of
+  Object Relational Mapping.
+
+3. ActiveSupport
+  -Active Support provides Ruby language extensions, utilities, and other core
+  extensions.
+
+4. ActionPack
+  -Action Pack is the framework used by Rails for handling and responding to web
+  requests. It provides routing mechanisms, defines controllers and generates
+  responses by rendering views. It is the View and Controller of Model-View-
+  Controller.
+
+5. ActionMailer
+  -Action Mailer allows you to send emails from your Rails app using mailer
+  classes and views.
