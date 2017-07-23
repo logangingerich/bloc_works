@@ -21,3 +21,5 @@
   Controller.
 
 5. ActionMailer
+  -Action Mailer allows you to send emails from your Rails app using mailer
+  classes and views.
