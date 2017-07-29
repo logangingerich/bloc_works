@@ -8,8 +8,8 @@ class ApplicationTest < Test::Unit::TestCase
     BlocWorks::Application.new
   end
 
-  def call_test
-    get "/"
-    assert_equal("Hello Blocheads!", last_response.body)
+  def welcome_test
+    get "/books/welcome"
+    assert last_response.ok?
   end
 end
