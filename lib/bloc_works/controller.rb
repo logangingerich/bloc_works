@@ -37,7 +37,15 @@ module BlocWorks
     end
 
     def render(*args)
-      response(create_response_array(*args))
+      if @routing_params["action"].nil?
+        response(create_response_array("welcome", locals))
+      else
+        response(create_response_array(@routing_params["action"], locals))
+      end
+    end
+
+    def redirect(*args)
+      response(create_response_array(*args), 302)
     end
 
     def get_response

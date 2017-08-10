@@ -34,13 +34,11 @@ module BlocWorks
     end
 
     def map(url, *args)
-      options = {}
+      options, destination = {}, nil
       options = args.pop if args[-1].is_a?(Hash)
       options[:default] ||= {}
 
-      destination = nil
-      destination = args.pop if args.size > 0
-      raise "Too many args!" if args.size > 0
+      destination = args.pop, raise "Too many args!" if args.size > 0
 
       parts = url.split("/")
       parts.reject! { |part| part.empty? }
@@ -88,6 +86,7 @@ module BlocWorks
         end
       end
     end
+    
     def get_destination(destination, routing_params = {})
       if destination.respond_to?(:call)
         return destination
